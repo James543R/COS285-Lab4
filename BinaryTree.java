@@ -1,5 +1,10 @@
-public class BinaryTree<Integer> {
-  protected Node<Integer> root;
+public class BinaryTree {
+  protected Node root;
+
+  static class Node {
+    Node right, left;
+    int data;
+  }
 
   public void testing(){
     

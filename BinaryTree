@@ -1,0 +1,4 @@
+public class BinaryTree<Integer> {
+  protected Node<Integer> root;
+
+}

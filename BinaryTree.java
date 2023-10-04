@@ -1,44 +1,26 @@
+//Author - James Libby
 public class BinaryTree {
   protected Node root;
-  
-  public BinaryTree(){
-	  root = null;
-  }
 
+  //Node class to be used with BinaryTree
   static class Node {
     Node right, left;
     int data;
+
+    //constructor for Node to allow creating new nodes with a right and left node and an int for data
+    public Node(Node right, Node left, int data){
+      this.right = right;
+      this.left = left;
+      this.data = data;
+    }
+
+    //empty constructor for node
+    public Node() {
+
+    }
   }
 
-  public boolean add(int number) {
-	  if(root == null) {
-		  root.data = number;
-		  return true;
-	  }else if(number<root.data){
-		  add(root.left, number);
-		  return true;
-	  }else if(number> root.data) {
-		  add(root.right, number);
-		  return true;
-	  }else {
-		  return false;
-	  }
-  }
-  public boolean add(Node localRoot, int number) {
-	  if(localRoot == null) {
-		  localRoot.data = number;
-		  return true;
-	  }else if(number<localRoot.data){
-		  add(localRoot.left, number);
-		  return true;
-	  }else if(number> localRoot.data) {
-		  add(localRoot.right, number);
-		  return true;
-	  }else {
-		  return false;
-	  }
-  }
-
+  //empty testing method
   public void testing(){
     
   }

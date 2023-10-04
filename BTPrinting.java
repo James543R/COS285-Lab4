@@ -39,12 +39,10 @@ public class BTPrinting extends BinaryTree{
 	
 	public void testing() {
 		BTPrinting test = new BTPrinting();
-		test.root.data = 0;
-		test.root.left.data = 1;
-		test.root.left.left.data = 2;
-		test.root.left.left.left.data = 3;
-		
-		test.printLeft();
+		for(int i = 0;i<10;i++) {
+			test.add(i);
+		}
+		test.preOrder();
 	}
 
 }

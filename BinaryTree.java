@@ -1,7 +1,17 @@
-public class BinaryTree<Integer> {
-  protected Node<Integer> root;
+public class BinaryTree {
+  protected Node root;
+  
+  public BinaryTree(){
+	  root = null;
+  }
 
-  public void override(){
+  static class Node {
+    Node right, left;
+    int data;
+  }
+
+
+  public void testing(){
     
-}
+  }
 }

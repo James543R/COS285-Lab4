@@ -62,23 +62,20 @@ public class BTPrinting extends BinaryTree {
 		System.out.print(n.data);
 	}
 
-	public static void testing(BTPrinting BTP) {
-		BTP.addBTP(5);
-		BTP.addBTP(3);
-		BTP.addBTP(2);
-		BTP.addBTP(1);
-		BTP.addBTP(4);
-		BTP.addBTP(7);
-		BTP.addBTP(6);
-		BTP.addBTP(8);
-	}
-
-	public static void main(String[] args) {
+	public static void testing() {
 		BTPrinting test = new BTPrinting();
-		testing(test);
+		test.addBTP(5);
+		test.addBTP(3);
+		test.addBTP(2);
+		test.addBTP(1);
+		test.addBTP(4);
+		test.addBTP(7);
+		test.addBTP(6);
+		test.addBTP(8);
+		
+		System.out.println("The tree in a preorder fashion");
 		test.preOrder();
-		System.out.println();
+		System.out.println("\nThe leftmost path of the tree");
 		test.printLeft();
 	}
-
 }

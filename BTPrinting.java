@@ -62,7 +62,7 @@ public class BTPrinting extends BinaryTree {
 		System.out.print(n.data);
 	}
 
-	public static void testing() {
+	public void testing() {
 		BTPrinting test = new BTPrinting();
 		test.addBTP(5);
 		test.addBTP(3);

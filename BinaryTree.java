@@ -1,3 +1,4 @@
+//Author - James Libby
 public class BinaryTree {
   protected Node root;
 

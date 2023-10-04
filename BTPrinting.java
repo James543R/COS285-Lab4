@@ -9,9 +9,7 @@ public class BTPrinting extends BinaryTree {
         root = addBTP(root, key); 
     } 
    
-
     private Node addBTP(Node localRoot, int num) { 
-
         if (localRoot == null) { 
         	localRoot = new Node(num); 
             return localRoot; 
@@ -23,7 +21,8 @@ public class BTPrinting extends BinaryTree {
         	localRoot.right = addBTP(localRoot.right, num); 
         return localRoot; 
     } 
-	/**
+	
+    /**
 	 * mason beale
 	 */
 	public void preOrder() {
@@ -32,13 +31,13 @@ public class BTPrinting extends BinaryTree {
 
 	/**
 	 * mason beale
-	 * 
 	 * @param n the node to start at
 	 */
 	public void preOrder(Node n) {
 		if (n == null) {
 			return;
 		}
+		System.out.print(n.data);
 		preOrder(n.left);
 		preOrder(n.right);
 	}
@@ -47,8 +46,7 @@ public class BTPrinting extends BinaryTree {
 	 * mason beale
 	 */
 	public void printLeft() {
-		printLeft(root.left);
-		System.out.println(root.data);
+		printLeft(root);
 	}
 
 	/**
@@ -57,10 +55,11 @@ public class BTPrinting extends BinaryTree {
 	 * @param n the node to start at
 	 */
 	public void printLeft(Node n) {
-		if (n == null)
+		if (n == null) {
 			return;
+		}
 		printLeft(n.left);
-		System.out.println(n.data);
+		System.out.print(n.data);
 	}
 
 	public static void testing(BTPrinting BTP) {
@@ -78,6 +77,8 @@ public class BTPrinting extends BinaryTree {
 		BTPrinting test = new BTPrinting();
 		testing(test);
 		test.preOrder();
+		System.out.println();
+		test.printLeft();
 	}
 
 }

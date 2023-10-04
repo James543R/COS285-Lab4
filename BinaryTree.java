@@ -14,6 +14,12 @@ public class BinaryTree {
       this.data = data;
     }
 
+  //constructor for a Node with only the data
+    public Node(int data){
+      this.right = null;
+      this.left = null;
+      this.data = data;
+    }
     //empty constructor for node
     public Node() {
 

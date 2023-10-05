@@ -6,6 +6,26 @@
 
 public class searchBT extends BinaryTree {
 	
+	//binary tree add method to add everything into the tree in order
+	public void add(int n) {
+        super.root = add(super.root, n);
+    }
+	
+    private Node add(Node node, int n) {
+        if (node == null) {
+            node = new Node(n);
+            return node;
+        }
+
+        if (n < node.data) {
+            node.left = add(node.left, n);
+        } else if (n > node.data) {
+            node.right = add(node.right, n);
+        }
+
+        return node;
+    }
+	
 	//public access method
 	public boolean contains(int n) {
 		if(super.root = null)
